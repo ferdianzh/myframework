@@ -1,0 +1,7 @@
+Options -Indexes
+
+# Deny access to files with extensions in filesmatch
+<FilesMatch "\.(php|ini|psd|log|sh)$">
+Order allow,deny
+Deny from all
+</FilesMatch>

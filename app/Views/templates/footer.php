@@ -1,0 +1,6 @@
+   <!-- script -->
+   
+   <!-- endscript -->
+
+</body>
+</html>
