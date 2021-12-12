@@ -2,9 +2,17 @@
 
 use Core\Controller;
 use Functions\Session;
+use Models\PangkalanModel;
 
 class Manage extends Controller
 {
+   public $pangkalanModel;
+
+   public function __construct()
+   {
+      $this->pangkalanModel = new PangkalanModel;
+   }
+
    public function index()
    {
       Session::setFlashdata('Manage');
@@ -16,26 +24,32 @@ class Manage extends Controller
       Session::setFlashdata('Manage Pangkalan');
 
       if ( is_null($id) ) {
-         return $this->view("manage/pangkalan-show");
+         $data = [
+            'pangkalan' => $this->pangkalanModel->select('id, nama, tipe, X(kordinat) AS kordinat_x, Y(kordinat) AS kordinat_y')->get(),
+         ];
+
+         return $this->view("manage/pangkalan-show", $data);
       }
 
       $data = [
          'id' => $id,
       ];
+
+      return $this->view("manage/pangkalan-edit", $data);
    }
 
-   public function rute($id = null)
+   public function angkot($id = null)
    {
-      Session::setFlashdata('Manage Rute');
+      Session::setFlashdata('Manage Angkot');
 
       if ( is_null($id) ) {
-         return $this->view("manage/rute-show");
+         return $this->view("manage/angkot-show");
       }
 
       $data = [
          'id' => $id,
       ];
 
-      return $this->view("manage/rute-edit", $data);
+      return $this->view("manage/angkot-edit", $data);
    }
 }

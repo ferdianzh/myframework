@@ -6,7 +6,7 @@
             <a href="<?= BASEURL ?>/manage/pangkalan" class="btn btn-primary">Pangkalan</a>
         </div>
         <div class="col">
-            <a href="<?= BASEURL ?>/manage/rute" class="btn btn-success">Rute</a>
+            <a href="<?= BASEURL ?>/manage/angkot" class="btn btn-success">Angkot</a>
         </div>
     </div>
     <div class="container bg-warning">

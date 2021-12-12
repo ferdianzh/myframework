@@ -27,7 +27,7 @@ use Functions\Session;
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-link <?= $this->sectionCheck($title, 'manage pangkalan'); ?>" href="<?= BASEURL ?>/manage/pangkalan">Pangkalan</a>
-                    <a class="nav-link <?= $this->sectionCheck($title, 'manage rute'); ?>" href="<?= BASEURL ?>/manage/rute">Rute</a>
+                    <a class="nav-link <?= $this->sectionCheck($title, 'manage angkot'); ?>" href="<?= BASEURL ?>/manage/angkot">Angkot</a>
                 </div>
             </div>
         </div>
