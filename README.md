@@ -1,5 +1,5 @@
 # Angkothub
-hafizh jelek
+angkot hub adalah aplikasi rute perjalanan angkutan kota di surabaya
 ## Database
 db name = db_angkothub
 ### pangkalan
