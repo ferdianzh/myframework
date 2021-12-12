@@ -7,7 +7,7 @@ class Model extends Database{
    protected $field;
    protected $result;
 
-   public function getAll()
+   public function get()
    {
       if ( !isset($this->stmt) ) {
          $this->query("SELECT * FROM $this->table");
@@ -16,7 +16,7 @@ class Model extends Database{
       return $this->result;
    }
 
-   public function get()
+   public function first()
    {
       $this->result = $this->resultSingle();
       return $this->result;

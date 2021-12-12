@@ -16,7 +16,7 @@ class Home extends Controller
     public function index()
     {
         $data = [
-            "pangkalan"  => $this->pangkalanModel->select('nama')->where('id', 101)->get(),
+            "pangkalan"  => $this->pangkalanModel->select('nama')->where('id', 101)->first(),
         ];
 
         Session::setFlashdata('Home');
