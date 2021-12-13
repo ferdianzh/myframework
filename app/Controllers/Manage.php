@@ -2,15 +2,18 @@
 
 use Core\Controller;
 use Functions\Session;
+use Models\AngkotModel;
 use Models\PangkalanModel;
 
 class Manage extends Controller
 {
-   public $pangkalanModel;
+   private $pangkalanModel;
+   private $angkotModel;
 
    public function __construct()
    {
       $this->pangkalanModel = new PangkalanModel;
+      $this->angkotModel = new AngkotModel;
    }
 
    public function index()
@@ -58,5 +61,41 @@ class Manage extends Controller
       ];
 
       return $this->view("manage/angkot-edit", $data);
+   }
+
+   public function save($table)
+   {
+      $data = $_POST;
+
+      switch ($table) {
+         case "pangkalan":
+            $this->pangkalanModel->insert([
+               'id' => $data['id'],
+               'nama' => $data['nama'],
+               'tipe' => $data['tipe'],
+            ]);
+            
+            $this->redirect('/manage/pangkalan');
+            break;
+         case "angkot":
+            break;
+         default:
+            header("location:javascript://history.go(-1)");
+      }
+   }
+
+   public function delete($table, $id)
+   {
+      switch ($table) {
+         case "pangkalan":
+            $this->pangkalanModel->delete($id);
+            break;
+         case "angkot":
+            $this->angkotModel->delete($id);
+            break;
+         default:
+            Session::setFlashdata("data tidak ditemukan");
+      }
+      $this->redirect('/manage/pangkalan');
    }
 }

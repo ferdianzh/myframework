@@ -1,7 +1,7 @@
 <?php $this->view("templates/header2") ?>
 
 <div class="container mt-3">
-   <form class="row g-3">
+   <form class="row g-3" action="<?= BASEURL ?>/manage/save/pangkalan" method="post">
       <div class="col-8">
          <label for="id" class="form-label">ID</label>
          <input type="text" class="form-control" id="id" name="id" placeholder="Kode ID">
@@ -9,7 +9,7 @@
       <div class="col-md-4">
          <label for="tipe" class="form-label">Tipe</label>
          <select id="tipe" class="form-select" name="tipe">
-            <option value="1" selected>Pangkalan</option>
+            <option value="1">Pangkalan</option>
             <option value="2">Terminal</option>
          </select>
       </div>

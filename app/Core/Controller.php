@@ -11,6 +11,11 @@ class Controller {
         require_once "../app/views/" . $view . ".php";
     }
 
+    public function redirect($url)
+    {
+        header('Location: ' . BASEURL . $url);
+    }
+
     public function sectionCheck($title, $word)
     {
         $lowTitle = strtolower($title);

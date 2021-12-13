@@ -39,7 +39,7 @@ class Model extends Database{
       return $this;
    }
 
-   public function save($params)
+   public function insert($params)
    {
       $cols = $this->field;
       $columns = ':'.implode(', :', $this->field);
@@ -56,6 +56,16 @@ class Model extends Database{
       $this->execute();
       
       return $this->rowCount();
+   }
+
+   public function update($id, $params)
+   {
+      //
+   }
+
+   public function addGeoSpatial()
+   {
+      // UPDATE ... SET latitude=18, longitute=-63, geoPoint=GeomFromText('POINT(18 -63)') WHERE ...
    }
 
    public function delete($id)

@@ -27,7 +27,7 @@
             <td><?= $pangkal['kordinat_y'] ?></td>
             <td class="text-center">
                <div class="btn-group my-1">
-                  <a href="" class="btn btn-danger">Hapus</a>
+                  <a href="<?= BASEURL ?>/manage/delete/pangkalan/<?= $pangkal['id'] ?>" class="btn btn-danger" onclick="confirm('Hapus data?')">Hapus</a>
                   <a href="<?= BASEURL ?>/manage/pangkalan/<?= $pangkal['id'] ?>" class="btn btn-warning">Edit</a>
                </div>
             </td>
