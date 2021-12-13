@@ -30,7 +30,12 @@ class Model extends Database{
 
    public function where($dbColumn, $inputColumn)
    {
-      $this->query("SELECT * FROM $this->table where $dbColumn = $inputColumn");
+      if ( empty($this->stmt) ) {
+         $this->query("SELECT * FROM $this->table where $dbColumn = $inputColumn");
+      } else {
+         $query = $this->lastQuery . strval(" where $dbColumn = $inputColumn");
+         $this->query($query);
+      }
       return $this;
    }
 

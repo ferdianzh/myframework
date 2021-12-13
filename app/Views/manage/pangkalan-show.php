@@ -1,6 +1,7 @@
 <?php $this->view("templates/header2") ?>
 
 <div class="container mt-3">
+   <a href="<?= BASEURL ?>/manage/pangkalan/add" class="btn btn-dark mb-3">Tambah</a>
    <table id="main-table" class="table table-bordered table-striped align-middle">
       <thead>
          <tr class="bg-dark text-white"><th colspan="7"><h2>Pangkalan</h2></th></tr>

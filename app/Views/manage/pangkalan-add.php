@@ -4,7 +4,7 @@
    <form class="row g-3">
       <div class="col-8">
          <label for="id" class="form-label">ID</label>
-         <input type="text" class="form-control" id="id" name="id" placeholder="Kode ID" value="<?= $pangkalan['id'] ?>">
+         <input type="text" class="form-control" id="id" name="id" placeholder="Kode ID">
       </div>
       <div class="col-md-4">
          <label for="tipe" class="form-label">Tipe</label>
@@ -15,15 +15,15 @@
       </div>
       <div class="col-12">
          <label for="nama" class="form-label">Nama</label>
-         <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Pangkalan atau Terminal" value="<?= $pangkalan['nama'] ?>">
+         <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Pangkalan atau Terminal">
       </div>
       <div class="col-md-6">
          <label for="kordinat_x" class="form-label">Kordinat X</label>
-         <input type="number" class="form-control" id="kordinat_x" name="kordinat_x" value="<?= $pangkalan['kordinat_x'] ?>">
+         <input type="number" class="form-control" id="kordinat_x" name="kordinat_x">
       </div>
       <div class="col-md-6">
          <label for="kordinat_y" class="form-label">Kordinat Y</label>
-         <input type="number" class="form-control" id="kordinat_y" name="kordinat_y" value="<?= $pangkalan['kordinat_y'] ?>">
+         <input type="number" class="form-control" id="kordinat_y" name="kordinat_y">
       </div>
       <div class="col-12">
          <button type="submit" class="btn btn-dark">Submit</button>

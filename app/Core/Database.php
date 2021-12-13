@@ -13,6 +13,7 @@ class Database {
 
     protected $dbh;
     protected $stmt;
+    protected $lastQuery;
 
     public function __construct()
     {
@@ -33,6 +34,7 @@ class Database {
     public function query($query)
     {
         $this->stmt = $this->dbh->prepare($query);
+        $this->lastQuery = $query;
     }
 
     public function bind($param, $value, $type = null)
