@@ -14,11 +14,14 @@ use Functions\Session;
     <!-- style -->
     <link rel="stylesheet" href="<?= BASEURL ?>/css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="<?= BASEURL ?>/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin=""/>
     <!-- endstyle -->
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="<?= BASEURL ?>">Angkot<span>hub</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
