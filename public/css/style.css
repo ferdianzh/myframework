@@ -3,6 +3,11 @@
   font-family: sans-serif;
   font-weight: bold;
 }
-.navbar-brand span {
+
+.bg-hub {
+  background-color: #FF9900;
+}
+
+.text-hub {
   color: #FF9900;
 }

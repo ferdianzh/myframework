@@ -23,7 +23,7 @@ use Functions\Session;
 <body>
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="<?= BASEURL ?>">Angkot<span>hub</span></a>
+            <a class="navbar-brand" href="<?= BASEURL ?>">Angkot<span class="text-hub">hub</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
