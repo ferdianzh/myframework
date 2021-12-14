@@ -18,3 +18,7 @@
 .nav-tabs .nav-link.active {
   color: #000;
 }
+
+.tile-image {
+  height: 300px;
+}
