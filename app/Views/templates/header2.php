@@ -28,6 +28,7 @@ use Functions\Session;
                 <div class="navbar-nav">
                     <a class="nav-link <?= $this->sectionCheck($title, 'manage pangkalan'); ?>" href="<?= BASEURL ?>/manage/pangkalan">Pangkalan</a>
                     <a class="nav-link <?= $this->sectionCheck($title, 'manage angkot'); ?>" href="<?= BASEURL ?>/manage/angkot">Angkot</a>
+                    <a class="nav-link" href="<?= BASEURL ?>">Utama</a>
                 </div>
             </div>
         </div>

@@ -1,6 +1,6 @@
 <?php
 
-define("BASEURL", "http://localhost/angkothub/public");
+define("BASEURL", "http://localhost/myframework/public");
 
 // database
 define("DB_HOST", "localhost");

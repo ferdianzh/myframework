@@ -31,6 +31,7 @@ use Functions\Session;
                 <div class="navbar-nav">
                     <a class="nav-link <?= $this->sectionCheck($title, 'help'); ?>" href="<?= BASEURL ?>/help">Bantuan</a>
                     <a class="nav-link <?= $this->sectionCheck($title, 'about'); ?>" href="<?= BASEURL ?>/about">Tentang</a>
+                    <a class="nav-link" href="<?= BASEURL ?>/manage">Kelola</a>
                 </div>
             </div>
         </div>
