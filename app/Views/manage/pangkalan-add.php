@@ -19,11 +19,11 @@
       </div>
       <div class="col-md-6">
          <label for="kordinat_x" class="form-label">Kordinat X</label>
-         <input type="number" class="form-control" id="kordinat_x" name="kordinat_x">
+         <input type="text" class="form-control" id="kordinat_x" name="kordinat_x">
       </div>
       <div class="col-md-6">
          <label for="kordinat_y" class="form-label">Kordinat Y</label>
-         <input type="number" class="form-control" id="kordinat_y" name="kordinat_y">
+         <input type="text" class="form-control" id="kordinat_y" name="kordinat_y">
       </div>
       <div class="col-12">
          <button type="submit" class="btn btn-dark">Submit</button>

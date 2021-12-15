@@ -74,6 +74,10 @@ class Manage extends Controller
                'nama' => $data['nama'],
                'tipe' => $data['tipe'],
             ]);
+            $this->pangkalanModel->addGeoPoint('id', $data['id'], 'kordinat', [
+               'x' => $data['kordinat_x'],
+               'y' => $data['kordinat_y'],
+            ]);
             
             $this->redirect('/manage/pangkalan');
             break;
@@ -81,6 +85,26 @@ class Manage extends Controller
             break;
          default:
             header("location:javascript://history.go(-1)");
+      }
+   }
+
+   public function update($table, $id)
+   {
+      $newData = $_POST;
+
+      switch ($table) {
+         case "pangkalan":
+            $this->pangkalanModel->update('id', $id, [
+               'id' => $newData['id'],
+               'tipe' => $newData['tipe'],
+               'nama' => $newData['nama'],
+            ]);
+            $this->pangkalanModel->addGeoPoint('id', $id, 'kordinat', [
+               'x' => $newData['kordinat_x'],
+               'y' => $newData['kordinat_y'],
+            ]);
+
+            $this->redirect('/manage/pangkalan');
       }
    }
 

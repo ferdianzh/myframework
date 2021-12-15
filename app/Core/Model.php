@@ -58,14 +58,35 @@ class Model extends Database{
       return $this->rowCount();
    }
 
-   public function update($id, $params)
+   public function update($colName, $colValue, $params)
    {
-      //
+      $columns = "";
+      $columnsKey = array_keys($params);
+      $lastKey = end($columnsKey);
+
+      foreach ( $params as $key => $value ) {
+         if ( $value == trim($value) && strpos($value, ' ') )
+            $value = "'".$value."'";
+         if ( $key == $lastKey )
+            $columns .= $key.'='.$value;
+         else
+            $columns .= $key.'='.$value.', ';
+      }
+      $this->query("UPDATE $this->table SET $columns WHERE $colName=$colValue");
+
+      $this->execute();
+
+      return $this->rowCount();
    }
 
-   public function addGeoSpatial()
+   public function addGeoPoint($colName, $colValue, $target, $params)
    {
-      // UPDATE ... SET latitude=18, longitute=-63, geoPoint=GeomFromText('POINT(18 -63)') WHERE ...
+      $point = "'POINT(".$params['x']." ".$params['y'].")'";
+      $this->query("UPDATE $this->table SET $target=GeomFromText($point) WHERE $colName=$colValue");
+
+      $this->execute();
+
+      return $this->rowCount();
    }
 
    public function delete($id)

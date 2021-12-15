@@ -84,16 +84,18 @@
     }).addTo(map);
 
     <?php foreach ( $pangkalan as $pangkal ) : ?>
-    var marker = L.marker([-7.26811, 112.66676]).addTo(map).bindPopup(
-                    '<b><?= $pangkal['nama'] ?></b><hr/>Atur sebagai titik tujuan'
+    var marker = L.marker([
+                        <?= $pangkal['kordinat_y'].', '.$pangkal['kordinat_x'] ?>
+                    ]).addTo(map).bindPopup(
+                        '<b><?= $pangkal['nama'] ?></b><hr/>Atur sebagai titik tujuan'
                     );
     <?php endforeach; ?>
 
-    var pathLine = L.polyline([
-        [-7.26811, 112.65676],
-        [-7.27811, 112.66676],
-        [-7.26811, 112.67676],
-    ]).addTo(map)
+    // var pathLine = L.polyline([
+    //     [-7.26811, 112.65676],
+    //     [-7.27811, 112.66676],
+    //     [-7.26811, 112.67676],
+    // ]).addTo(map)
 
     var popup = L.popup();
 
